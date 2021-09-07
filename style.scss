@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+header {
+  background-color: #03045e;
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  width: fill;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 8rem;
+  align-items: center;
+}
+.burger {
+  display: none;
+}
+
+.logo {
+  color: #fff;
+  font-family: montserrat;
+  cursor: pointer;
+
+  span {
+    color: #ff8800;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  li {
+    list-style: none;
+    font-family: montserrat;
+    font-weight: 600;
+    padding: 0 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #ff8800;
+      }
+    }
+  }
+
+  .btn {
+    list-style: none;
+    font-family: montserrat;
+    font-weight: 600;
+    transition: all 0.3s ease-in;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #ff8800;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background-color: orange;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 946px) {
+  header {
+    padding: 1rem 5rem;
+  }
+  nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    background-color: #ff8800;
+    width: 100%;
+    height: 15rem;
+    font-size: 20px;
+    padding: 0.8rem 6rem;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+  }
+
+  .nav-active {
+    opacity: 1;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+
+    li {
+      padding: 0.8rem 0rem;
+
+      a:hover {
+        color: #fff;
+      }
+    }
+    .btn {
+      a {
+        background: none;
+        padding: 0.5rem 0;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+
+  .burger {
+    display: block;
+
+    div {
+      background-color: #fff;
+      width: 2.5rem;
+      height: 0.35rem;
+      margin: 0.35rem;
+      border-radius: 0.1rem;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .burger-active {
+    .line1 {
+      transform: rotate(-135deg) translate(-8px, -8px);
+    }
+    .line2 {
+      opacity: 0;
+    }
+    .line3 {
+      transform: rotate(135deg) translate(-8px, 8px);
+    }
+  }
+}
+
+@media screen and (max-width: 536px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    padding-left: 3rem;
+  }
+}
